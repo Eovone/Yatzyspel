@@ -86,7 +86,8 @@ function rolldice() {
     checkPair();
     // skriv ut 1par
     document.getElementById("p1v7").innerHTML = diceArray.filter(checkPair).sort().pop() * 2;
-    
+    // kolla 2par
+    checkTwoPair();
         
 }
 
@@ -137,6 +138,7 @@ function rerollmarked() {
     // skriv ut 1par
     document.getElementById("p1v7").innerHTML = diceArray.filter(checkPair).sort().pop() * 2;
     // kolla 2par
+    checkTwoPair();
     
 
 }
@@ -166,9 +168,11 @@ function checkPair(diceValue) {
   
     if (counter >= 2) {
       return true;
-    }
+    }    
+}
 
-    
+function checkTwoPair(){
+    document.getElementById("p1v8").innerHTML = "xx";
 }
 
 function clearPrevValue() {
