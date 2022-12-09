@@ -75,13 +75,18 @@ function rolldice() {
     }     
     console.log(diceArray);
 
+    // kolla & skriv ut 1or - 6or
     checkValue(1);
     checkValue(2);
     checkValue(3);
     checkValue(4);
     checkValue(5);
     checkValue(6);
-    checkValue2();
+    // kolla 1par
+    checkPair();
+    // skriv ut 1par
+    document.getElementById("p1v7").innerHTML = diceArray.filter(checkPair).sort().pop() * 2;
+    
         
 }
 
@@ -120,13 +125,18 @@ function rerollmarked() {
 
     clearPrevValue();
 
+    // kolla & skriv ut 1or - 6or
     checkValue(1);
     checkValue(2);
     checkValue(3);
     checkValue(4);
     checkValue(5);
     checkValue(6);
-    checkValue2();
+    // kolla 1par
+    checkPair();
+    // skriv ut 1par
+    document.getElementById("p1v7").innerHTML = diceArray.filter(checkPair).sort().pop() * 2;
+    // kolla 2par
     
 
 }
@@ -146,39 +156,19 @@ function checkValue(valueToCheck) {
     }
 }
 
-
-function findPair(value) {
-    let highestValue = null;
-    let count = 0;
-    diceArray.forEach(element => {
-        if (value == element) {
-            count += 1;
-        }
-
-        if (count == 2 && highestValue == null) {
-            console.log("hej");
-            highestValue = value;
-        }
-
-        if (highestValue != null && count == 2) {
-            console.log("hej2");
-           if (value > highestValue) {
-
-            highestValue = value;
-           }
-        }
-        return highestValue;
+function checkPair(diceValue) {   
+    counter = 0;
+    diceArray.forEach((element) => {
+      if (element == diceValue) {
+        counter += 1;
+      }
     });
-}
-
-function checkValue2() {
+  
+    if (counter >= 2) {
+      return true;
+    }
 
     
-    let highestPair = diceArray.filter(findPair);
-
-    console.log(highestPair);
-
-    document.getElementById("p1v7").innerHTML = highestPair;
 }
 
 function clearPrevValue() {
