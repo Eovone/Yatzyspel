@@ -1,0 +1,47 @@
+body {
+    background-color: black;
+    color: rgb(56, 125, 168);
+}
+#roundcounter {    
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+#roundcounter div {    
+    margin: 4px;
+}
+#rerollcounter {
+    padding: 4px;
+    border: 3px solid red;
+    font-size: 30px;
+    margin-left: 10% !important;
+}
+#buttons div {
+    display: inline-block;
+    margin: 1%;
+}
+#buttons button {
+    height: 60px;
+    width: 60px;
+    margin: 1%;
+    font-size: 18px;
+}
+#nextplayer {
+    visibility: hidden;
+}
+#playerbuttons {
+    display: flex;
+}
+#playerbuttons button {
+    background-color: darkgreen;
+    height: 100px;
+    width: 100px;
+    margin: 1%;
+    font-size: 18px;
+}
+
+table, tr, td, th {border:2px solid whitesmoke;}
+#playerpoints{margin-top: 10%;}
+td:hover{
+    background-color: blue;
+}

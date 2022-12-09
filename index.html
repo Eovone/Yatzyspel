@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">      
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy</title>
+</head>
+
+<body>
+    <div id="roundcounter">
+        <div>Times left to roll Dice:</div>
+        <div id="rerollcounter">3</div>
+    </div>    
+    
+    <div id="buttons">
+        <form>
+            <div id="button1">
+                <label for="firstDice"><button type="button" id="dice1">.</button></label>
+                <input id="checkbox1" type="checkbox" name="firstDice">
+            </div>
+
+            <div id="button2">
+                <label for="secondDice"><button type="button" id="dice2">.</button></label>
+                <input id="checkbox2" type="checkbox" name="secondDice">
+            </div>
+
+            <div id="button3">
+                <label for="thirdDice"><button type="button" id="dice3">.</button></label>
+                <input id="checkbox3" type="checkbox" name="thirdDice">
+            </div>
+
+            <div id="button4">
+                <label for="fourthDice"><button type="button" id="dice4">.</button></label>
+                <input id="checkbox4" type="checkbox" name="fourthDice">
+            </div>
+
+            <div id="button5">
+                <label for="fifthDice"><button type="button" id="dice5">.</button></label>
+                <input id="checkbox5" type="checkbox" name="fifthDice">
+            </div>
+        </form>
+        <div>Mark Dice you want to reroll</div>
+    </div>
+    
+    <div id="playerbuttons">
+        <div id="rollbutton">
+            <button type="button" onclick="rolldice()">Roll Dice</button>
+        </div>
+
+        <div id="rerollbutton">
+            <button onclick="rerollmarked()">Reroll Marked Dice</button>
+        </div>
+        <div id="nextplayer">
+            <button onclick="nextplayer()">Next Player</button>
+        </div>
+    </div>
+
+    <div id="playerpoints">
+        <table>
+            <tr>
+                <th></th>
+                <th>Spelare 1</th>
+                <th>Spelare 2</th>
+            </tr>
+            <tr>
+                <td>1:or</td>
+                <td id="p1v1"></td>
+                <td id="p2v1"></td>
+            </tr>
+            <tr>
+                <td>2:or</td>
+                <td id="p1v2"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3:or</td>
+                <td id="p1v3"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4:or</td>
+                <td id="p1v4"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5:or</td>
+                <td id="p1v5"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6:or</td>
+                <td id="p1v6"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Summa</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Bonus</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Par</td>
+                <td id="p1v7"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Två Par</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Triss</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Fyrtal</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Liten Stege</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Stor Stege</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Kåk</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Chans</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Yatzy</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Totalt:</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>  
+</body>
+
+</html>
